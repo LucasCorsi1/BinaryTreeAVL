@@ -32,33 +32,33 @@ namespace BinarioSearchTree
             return root;
         }
 
-        public void traversing(Node root) //perocrre os nós
+        public void TRaverisng(Node root) //perocrre os nós
         {
             if (root == null)
             {
                 return;
             }
 
-            traversing(root.left);
-            traversing(root.right);
+            TRaverisng(root.left);
+            TRaverisng(root.right);
         }
 
 
-        public Node deleteNode(Node root, int k) // delete
+        public Node deleteNode(Node root, int DeleteValues) // delete
         {
             if (root == null)
             {
                 return root;
             }
 
-            if (root.value > k)
+            if (root.value > DeleteValues)
             {
-                root.left = deleteNode(root.left, k);
+                root.left = deleteNode(root.left, DeleteValues);
                 return root;
             }
-            else if (root.value < k)
+            else if (root.value < DeleteValues)
             {
-                root.right = deleteNode(root.right, k);
+                root.right = deleteNode(root.right, DeleteValues);
                 return root;
             }
 
@@ -78,20 +78,21 @@ namespace BinarioSearchTree
             else
             {
 
-                Node succParent = root.right;
+                Node successorParent = root.right;
 
-                Node succ = root.right;
-                while (succ.left != null)
+                Node succerssorvalue = root.right;
+
+                while (succerssorvalue.left != null)
                 {
-                    succParent = succ;
-                    succ = succ.left;
+                    successorParent = succerssorvalue;
+                    succerssorvalue = succerssorvalue.left;
                 }
 
-                succParent.left = succ.right;
+                successorParent.left = succerssorvalue.right;
 
-                root.value = succ.value;
+                root.value = succerssorvalue.value;
 
-                succ = null;
+                succerssorvalue = null;
                 return root;
             }
         }
