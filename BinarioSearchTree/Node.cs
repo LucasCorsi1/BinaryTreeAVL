@@ -12,7 +12,7 @@ namespace BinarioSearchTree
         Node left;
         Node right;
 
-        public Node insert(Node root, int v)
+        public Node insert(Node root, int v)  // insere o valor
         {
             if (root == null)
             {
@@ -32,16 +32,72 @@ namespace BinarioSearchTree
             return root;
         }
 
-        public void traverse(Node root)
+        public void traversing(Node root) //perocrre os nós
         {
             if (root == null)
             {
                 return;
             }
 
-            traverse(root.left);
-            traverse(root.right);
+            traversing(root.left);
+            traversing(root.right);
         }
 
+
+        public Node deleteNode(Node root, int k) // delete
+        {
+            if (root == null)
+            {
+                return root;
+            }
+
+            if (root.value > k)
+            {
+                root.left = deleteNode(root.left, k);
+                return root;
+            }
+            else if (root.value < k)
+            {
+                root.right = deleteNode(root.right, k);
+                return root;
+            }
+
+            if (root.left == null)
+            {
+                Node temp = root.right;
+                root = null;
+                return temp;
+            }
+            else if (root.right == null)
+            {
+                Node temp = root.left;
+                root = null;
+                return temp;
+            }
+
+            else
+            {
+
+                Node succParent = root.right;
+
+                Node succ = root.right;
+                while (succ.left != null)
+                {
+                    succParent = succ;
+                    succ = succ.left;
+                }
+
+                succParent.left = succ.right;
+
+                root.value = succ.value;
+
+                succ = null;
+                return root;
+            }
+        }
+
+
     }
+
 }
+
