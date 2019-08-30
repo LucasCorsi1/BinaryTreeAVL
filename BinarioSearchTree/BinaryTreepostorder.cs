@@ -23,11 +23,9 @@ namespace BinarioSearchTree
                 if (postIndex.postindex > 0)
                 {
 
-                    root.right = constructTreeUtil(post, postIndex,
-                            post[postIndex.postindex], key, max, size);
+                    root.right = constructTreeUtil(post, postIndex, post[postIndex.postindex], key, max, size);
 
-                    root.left = constructTreeUtil(post, postIndex,
-                            post[postIndex.postindex], min, key, size);
+                    root.left = constructTreeUtil(post, postIndex, post[postIndex.postindex], min, key, size);
                 }
             }
             return root;
@@ -39,17 +37,6 @@ namespace BinarioSearchTree
             Index index = new Index();
             index.postindex = size - 1;
             return constructTreeUtil(post, index, post[index.postindex], int.MinValue, int.MaxValue, size);
-        }
-
-        void printInorder(Node node)
-        {
-            if (node == null)
-            {
-                return;
-            }
-
-            printInorder(node.left);
-            printInorder(node.right);
         }
     }
 }

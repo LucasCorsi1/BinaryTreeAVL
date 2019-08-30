@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="bfs.cs" />
+    <Compile Include="Bfs.cs" />
     <Compile Include="BinaryTreepostorder.cs" />
     <Compile Include="BinaryTreepreorder.cs" />
     <Compile Include="DeleteNode.cs" />

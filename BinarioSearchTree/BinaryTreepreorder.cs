@@ -7,7 +7,7 @@ namespace BinarioSearchTree
     {
         public Index index = new Index();
 
-        public virtual Node constructTreeUtil(int[] pre, Index preIndex, int low, int high, int size)
+        public  Node constructTreeUtil(int[] pre, Index preIndex, int low, int high, int size)
         {
             if (preIndex.index >= size || low > high)
             {
@@ -38,7 +38,7 @@ namespace BinarioSearchTree
             return root;
         }
 
-        public virtual Node constructTree(int[] pre, int size)
+        public  Node constructTree(int[] pre, int size)
         {
             return constructTreeUtil(pre, index, 0, size - 1, size);
         }

@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 namespace BinarioSearchTree
 {
 
-    public class bfs
+    public class Bfs
     {
-
         Node root;
 
-        void printLevelOrder()
+        public void SearchinTree()
         {
             Queue<Node> queue = new Queue<Node>();
             queue.Enqueue(root);
