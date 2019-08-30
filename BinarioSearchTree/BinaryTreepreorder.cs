@@ -42,16 +42,5 @@ namespace BinarioSearchTree
         {
             return constructTreeUtil(pre, index, 0, size - 1, size);
         }
-
-        public virtual void printInorder(Node node)
-        {
-            if (node == null)
-            {
-                return;
-            }
-            printInorder(node.left);
-            printInorder(node.right);
-        }
-
     }
 }

@@ -19,8 +19,6 @@ namespace BinarioSearchTree
             while (queue.Count != 0)
             {
                 Node tempNode = queue.Dequeue();
-                Console.Write(tempNode.value + " ");
-
 
                 if (tempNode.left != null)
                 {
