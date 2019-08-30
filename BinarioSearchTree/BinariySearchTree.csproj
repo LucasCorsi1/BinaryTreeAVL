@@ -47,8 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bfs.cs" />
-    <Compile Include="BinaryTreepostorder.cs" />
-    <Compile Include="BinaryTreepreorder.cs" />
     <Compile Include="DeleteNode.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
