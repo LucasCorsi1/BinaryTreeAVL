@@ -8,7 +8,6 @@ namespace BinarioSearchTree
 {
     public class Index
     {
-
         public int index = 0;
         public int postindex = 0;
     }

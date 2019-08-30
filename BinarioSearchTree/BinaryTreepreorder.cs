@@ -6,6 +6,7 @@ namespace BinarioSearchTree
     public class BinaryTreepreorder
     {
         public Index index = new Index();
+
         public virtual Node constructTreeUtil(int[] pre, Index preIndex, int low, int high, int size)
         {
             if (preIndex.index >= size || low > high)
@@ -49,7 +50,6 @@ namespace BinarioSearchTree
                 return;
             }
             printInorder(node.left);
-            Console.Write(node.value + " ");
             printInorder(node.right);
         }
 

@@ -49,7 +49,6 @@ namespace BinarioSearchTree
             }
 
             printInorder(node.left);
-            Console.Write(node.value + " ");
             printInorder(node.right);
         }
     }
