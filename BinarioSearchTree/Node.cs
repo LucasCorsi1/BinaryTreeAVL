@@ -1,22 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BinarioSearchTree
+﻿namespace BinarioSearchTree
 {
     public class Node
     {
         public int value;
-        Node left;
-        Node right;
+        public Node left;
+        public Node right;
+
+        public Node(int d)
+        {
+            value = d;
+            left = right = null;
+        }
+
 
         public Node insert(Node root, int v)  // insere o valor
         {
             if (root == null)
             {
-                root = new Node();
+                root = new Node(v);
                 root.value = v;
             }
             else if (v < root.value)
