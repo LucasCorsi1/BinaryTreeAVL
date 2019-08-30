@@ -15,18 +15,6 @@ namespace BinarioSearchTree
         public Form1()
         {
             InitializeComponent();
-            print();
-        }
-
-        public void TRaverisng(Node root) //percorre os nós
-        {
-            if (root == null)
-            {
-                return;
-            }
-
-            TRaverisng(root.left);
-            TRaverisng(root.right);
         }
 
 
@@ -34,5 +22,43 @@ namespace BinarioSearchTree
         {
 
         }
+
+
+        private void inorder(Node root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            inorder(root.left);
+            // printar valor aqui nesta linha <-
+            inorder(root.right);
+        }
+
+
+        private void preorder(Node root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            //Printar valor aqui nesta linha <-
+            preorder(root.left);
+            preorder(root.right);
+        }
+
+
+        private void postorder(Node root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            postorder(root.left);
+            postorder(root.right);
+            //printar valor aqui nesta linha <-
+        }
+
+
     }
 }
