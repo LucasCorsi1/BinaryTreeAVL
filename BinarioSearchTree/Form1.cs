@@ -59,7 +59,7 @@ namespace BinarioSearchTree
                 return;
             }
             inorder(root.left);
-            // printar valor aqui nesta linha <-
+            richTextBox1.AppendText(root.value + " ");
             inorder(root.right);
         }
 
@@ -70,7 +70,7 @@ namespace BinarioSearchTree
             {
                 return;
             }
-            //Printar valor aqui nesta linha <-
+            richTextBox1.AppendText(root.value + " ");
             preorder(root.left);
             preorder(root.right);
         }
@@ -84,7 +84,7 @@ namespace BinarioSearchTree
             }
             postorder(root.left);
             postorder(root.right);
-            //printar valor aqui nesta linha <-
+            richTextBox1.AppendText(root.value + " ");
         }
 
         private void btnshow_Click(object sender, EventArgs e)
@@ -112,6 +112,53 @@ namespace BinarioSearchTree
             delete.deleteNode(root, a);
             print2D(root);
 
+        }
+
+        private void btnBusca_Click(object sender, EventArgs e)
+        {
+            int a = Convert.ToInt32(NumericSearch.Value);
+
+            if (search.SearchinTree(root, a))
+            {
+                MessageBox.Show("Valor encontrado");
+            }
+            else MessageBox.Show("Valor não encontrado");
+        }
+
+        private void buttonInorder_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+            inorder(root);
+        }
+
+        private void buttonPostorder_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+            postorder(root);
+        }
+
+        private void buttonPreorder_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+            preorder(root);
+        }
+        public void deleteBinaryTree(Node root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            deleteBinaryTree(root.left);
+            root.left = null;
+            deleteBinaryTree(root.right);
+            root.right = null;
+        }
+
+        private void btndeleteall_Click(object sender, EventArgs e)
+        {
+            
+            deleteBinaryTree(root);
+            print2D(root);
         }
     }
 }

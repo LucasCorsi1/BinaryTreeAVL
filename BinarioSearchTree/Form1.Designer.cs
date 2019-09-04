@@ -34,15 +34,22 @@
             this.NumericInsert = new System.Windows.Forms.NumericUpDown();
             this.btnDelete = new System.Windows.Forms.Button();
             this.NumericDelete = new System.Windows.Forms.NumericUpDown();
+            this.btnBusca = new System.Windows.Forms.Button();
+            this.NumericSearch = new System.Windows.Forms.NumericUpDown();
+            this.buttonPostorder = new System.Windows.Forms.Button();
+            this.buttonInorder = new System.Windows.Forms.Button();
+            this.buttonPreorder = new System.Windows.Forms.Button();
+            this.btndeleteall = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NumericInsert)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumericSearch)).BeginInit();
             this.SuspendLayout();
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(293, 64);
+            this.richTextBox1.Location = new System.Drawing.Point(282, 55);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(602, 374);
+            this.richTextBox1.Size = new System.Drawing.Size(623, 374);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -84,7 +91,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "Delete";
+            this.btnDelete.Text = "Deletar";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -100,11 +107,79 @@
             this.NumericDelete.Size = new System.Drawing.Size(52, 20);
             this.NumericDelete.TabIndex = 5;
             // 
+            // btnBusca
+            // 
+            this.btnBusca.Location = new System.Drawing.Point(12, 139);
+            this.btnBusca.Name = "btnBusca";
+            this.btnBusca.Size = new System.Drawing.Size(75, 23);
+            this.btnBusca.TabIndex = 6;
+            this.btnBusca.Text = "Busca";
+            this.btnBusca.UseVisualStyleBackColor = true;
+            this.btnBusca.Click += new System.EventHandler(this.btnBusca_Click);
+            // 
+            // NumericSearch
+            // 
+            this.NumericSearch.Location = new System.Drawing.Point(93, 142);
+            this.NumericSearch.Maximum = new decimal(new int[] {
+            1569325055,
+            23283064,
+            0,
+            0});
+            this.NumericSearch.Name = "NumericSearch";
+            this.NumericSearch.Size = new System.Drawing.Size(52, 20);
+            this.NumericSearch.TabIndex = 7;
+            // 
+            // buttonPostorder
+            // 
+            this.buttonPostorder.Location = new System.Drawing.Point(12, 209);
+            this.buttonPostorder.Name = "buttonPostorder";
+            this.buttonPostorder.Size = new System.Drawing.Size(75, 23);
+            this.buttonPostorder.TabIndex = 8;
+            this.buttonPostorder.Text = "Postorder";
+            this.buttonPostorder.UseVisualStyleBackColor = true;
+            this.buttonPostorder.Click += new System.EventHandler(this.buttonPostorder_Click);
+            // 
+            // buttonInorder
+            // 
+            this.buttonInorder.Location = new System.Drawing.Point(12, 180);
+            this.buttonInorder.Name = "buttonInorder";
+            this.buttonInorder.Size = new System.Drawing.Size(75, 23);
+            this.buttonInorder.TabIndex = 9;
+            this.buttonInorder.Text = "Inorder";
+            this.buttonInorder.UseVisualStyleBackColor = true;
+            this.buttonInorder.Click += new System.EventHandler(this.buttonInorder_Click);
+            // 
+            // buttonPreorder
+            // 
+            this.buttonPreorder.Location = new System.Drawing.Point(12, 238);
+            this.buttonPreorder.Name = "buttonPreorder";
+            this.buttonPreorder.Size = new System.Drawing.Size(75, 23);
+            this.buttonPreorder.TabIndex = 10;
+            this.buttonPreorder.Text = "Preorder";
+            this.buttonPreorder.UseVisualStyleBackColor = true;
+            this.buttonPreorder.Click += new System.EventHandler(this.buttonPreorder_Click);
+            // 
+            // btndeleteall
+            // 
+            this.btndeleteall.Location = new System.Drawing.Point(12, 267);
+            this.btndeleteall.Name = "btndeleteall";
+            this.btndeleteall.Size = new System.Drawing.Size(85, 23);
+            this.btndeleteall.TabIndex = 11;
+            this.btndeleteall.Text = "Deletar Tudo";
+            this.btndeleteall.UseVisualStyleBackColor = true;
+            this.btndeleteall.Click += new System.EventHandler(this.btndeleteall_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 450);
+            this.ClientSize = new System.Drawing.Size(907, 431);
+            this.Controls.Add(this.btndeleteall);
+            this.Controls.Add(this.buttonPreorder);
+            this.Controls.Add(this.buttonInorder);
+            this.Controls.Add(this.buttonPostorder);
+            this.Controls.Add(this.NumericSearch);
+            this.Controls.Add(this.btnBusca);
             this.Controls.Add(this.NumericDelete);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.NumericInsert);
@@ -115,6 +190,7 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.NumericInsert)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumericSearch)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -127,6 +203,12 @@
         private System.Windows.Forms.NumericUpDown NumericInsert;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.NumericUpDown NumericDelete;
+        private System.Windows.Forms.Button btnBusca;
+        private System.Windows.Forms.NumericUpDown NumericSearch;
+        private System.Windows.Forms.Button buttonPostorder;
+        private System.Windows.Forms.Button buttonInorder;
+        private System.Windows.Forms.Button buttonPreorder;
+        private System.Windows.Forms.Button btndeleteall;
     }
 }
 
