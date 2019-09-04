@@ -29,13 +29,13 @@ namespace BinarioSearchTree
             if (root.left == null)
             {
                 Node temp = root.right;
-                root = null;
+                root.right = null;
                 return temp;
             }
             else if (root.right == null)
             {
                 Node temp = root.left;
-                root = null;
+                root.left = null;
                 return temp;
             }
 
@@ -61,7 +61,17 @@ namespace BinarioSearchTree
             }
         }
 
-     
+        public void deleteBinaryTree(Node root)
+        {
+            if (root == null)
+            {
+                return;
+            }
+            deleteBinaryTree(root.left);
+            root.left = null;
+            deleteBinaryTree(root.right);
+            root.right = null;
+        }
 
 
     }

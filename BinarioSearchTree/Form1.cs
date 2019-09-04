@@ -24,7 +24,7 @@ namespace BinarioSearchTree
 
 
 
-        private void print2DUtil(Node root, int space)
+        private void printRecursive(Node root, int space)
         {
             int COUNT = 10;
 
@@ -33,7 +33,7 @@ namespace BinarioSearchTree
 
             space += COUNT;
 
-            print2DUtil(root.right, space);
+            printRecursive(root.right, space);
 
 
             richTextBox1.AppendText(Environment.NewLine);
@@ -42,13 +42,13 @@ namespace BinarioSearchTree
                 richTextBox1.AppendText(" ");
             richTextBox1.AppendText(root.value + Environment.NewLine);
 
-            print2DUtil(root.left, space);
+            printRecursive(root.left, space);
         }
 
-        private void print2D(Node root)
+        private void print(Node root)
         {
             richTextBox1.Clear();
-            print2DUtil(root, 0);
+            printRecursive(root, 0);
         }
 
 
@@ -90,7 +90,7 @@ namespace BinarioSearchTree
         private void btnshow_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
-            print2D(root);
+            print(root);
 
         }
 
@@ -100,7 +100,7 @@ namespace BinarioSearchTree
             int a = Convert.ToInt32(NumericInsert.Value);
 
             insert.insert(root, a);
-            print2D(root);
+            print(root);
 
         }
 
@@ -110,7 +110,7 @@ namespace BinarioSearchTree
             int a = Convert.ToInt32(NumericDelete.Value);
 
             delete.deleteNode(root, a);
-            print2D(root);
+            print(root);
 
         }
 
@@ -142,23 +142,13 @@ namespace BinarioSearchTree
             richTextBox1.Clear();
             preorder(root);
         }
-        public void deleteBinaryTree(Node root)
-        {
-            if (root == null)
-            {
-                return;
-            }
-            deleteBinaryTree(root.left);
-            root.left = null;
-            deleteBinaryTree(root.right);
-            root.right = null;
-        }
+
 
         private void btndeleteall_Click(object sender, EventArgs e)
         {
             
-            deleteBinaryTree(root);
-            print2D(root);
+            delete.deleteBinaryTree(root);
+            print(root);
         }
     }
 }
