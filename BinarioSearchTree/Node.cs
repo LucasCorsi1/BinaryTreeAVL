@@ -8,11 +8,7 @@ namespace BinarioSearchTree
         public Node left;
         public Node right;
 
-        public Node(int d)
-        {
-            value = d;
-            left = right = null;
-        }
+
     }
 }
 

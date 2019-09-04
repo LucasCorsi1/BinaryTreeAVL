@@ -9,10 +9,9 @@ namespace BinarioSearchTree
 
     public class Bfs
     {
-        Node root;
-
-        public void SearchinTree()
+        public bool SearchinTree(Node root, int value)
         {
+            bool done = false;
             Queue<Node> queue = new Queue<Node>();
             queue.Enqueue(root);
             while (queue.Count != 0)
@@ -28,7 +27,11 @@ namespace BinarioSearchTree
                 {
                     queue.Enqueue(tempNode.right);
                 }
+                if(tempNode == root) {return done = true; }
+
             }
+            return done = false;
+            
         }
     }
 }

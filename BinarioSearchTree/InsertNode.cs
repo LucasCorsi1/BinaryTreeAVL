@@ -12,7 +12,7 @@ namespace BinarioSearchTree
         {
             if (root == null)
             {
-                root = new Node(v);
+                root = new Node();
                 root.value = v;
             }
             else if (v < root.value)

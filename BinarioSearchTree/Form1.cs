@@ -17,10 +17,38 @@ namespace BinarioSearchTree
             InitializeComponent();
         }
 
+        Node root = new Node();
+        InsertNode insert = new InsertNode();
+        DeleteNode delete = new DeleteNode();
+        Bfs search = new Bfs();
 
-        private void print()
+
+
+        private void print2DUtil(Node root, int space)
         {
+            int COUNT = 10;
 
+            if (root == null)
+                return;
+
+            space += COUNT;
+
+            print2DUtil(root.right, space);
+
+
+            richTextBox1.AppendText(Environment.NewLine);
+
+            for (int i = COUNT; i < space; i++)
+                richTextBox1.AppendText(" ");
+            richTextBox1.AppendText(root.value + Environment.NewLine);
+
+            print2DUtil(root.left, space);
+        }
+
+        private void print2D(Node root)
+        {
+            richTextBox1.Clear();
+            print2DUtil(root, 0);
         }
 
 
@@ -59,6 +87,31 @@ namespace BinarioSearchTree
             //printar valor aqui nesta linha <-
         }
 
+        private void btnshow_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+            print2D(root);
 
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+            int a = Convert.ToInt32(NumericInsert.Value);
+
+            insert.insert(root, a);
+            print2D(root);
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Clear();
+            int a = Convert.ToInt32(NumericDelete.Value);
+
+            delete.deleteNode(root, a);
+            print2D(root);
+
+        }
     }
 }
