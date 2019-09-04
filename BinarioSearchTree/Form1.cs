@@ -97,11 +97,14 @@ namespace BinarioSearchTree
         private void btnAdd_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
+        
             int a = Convert.ToInt32(NumericInsert.Value);
-
-            insert.insert(root, a);
-            print(root);
-
+            if (search.SearchinTree(root, a)) { MessageBox.Show("Valor ja exise"); print(root); }
+            else
+            {
+                insert.insert(root, a);
+                print(root);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
