@@ -8,8 +8,8 @@ namespace BinarioSearchTree
 {
     class DeleteNode
     {
-        InsertNodeAVL Del = new InsertNodeAVL();
-
+        InsertNodeAVL Root = new InsertNodeAVL();
+        AVL Del = new AVL();
 
         public void deleteBinaryTree(Node root)
         {
@@ -27,12 +27,13 @@ namespace BinarioSearchTree
 
         public void DeleteAVL(int deletevalue)
         {
-            Del.root = DeleteAVL(Del.root, deletevalue);
+            Root.root = DeleteAVL(Root.root, deletevalue);
         }
 
         private Node DeleteAVL(Node root, int deletevalue)
         {
             Node parent;
+
             if (root == null)
             { return null; }
             else

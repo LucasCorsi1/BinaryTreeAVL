@@ -1,8 +1,6 @@
 C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\bin\Debug\BinarioSearchTree.exe.config
 C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\bin\Debug\BinarioSearchTree.exe
 C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\bin\Debug\BinarioSearchTree.pdb
-C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\bin\Debug\BinarioSearchTree.exe.CodeAnalysisLog.xml
-C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\bin\Debug\BinarioSearchTree.exe.lastcodeanalysissucceeded
 C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\obj\Debug\BinarioSearchTree.Form1.resources
 C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\obj\Debug\BinarioSearchTree.Properties.Resources.resources
 C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\obj\Debug\BinariySearchTreeAVL.csproj.GenerateResource.cache

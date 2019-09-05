@@ -22,7 +22,6 @@ namespace BinarioSearchTree
         Bfs search = new Bfs();
 
 
-
         private void printRecursive(Node root, int space)
         {
             int COUNT = 10;

@@ -9,7 +9,8 @@ namespace BinarioSearchTree
     class InsertNodeAVL
     {
         public Node root;
-
+        AVL avl = new AVL();
+       
         public void Insert(int value)
         {
             Node newItem = new Node(value);
@@ -44,82 +45,30 @@ namespace BinarioSearchTree
         }
         public Node balance_tree(Node current)
         {
-            int b_factor = balance_factor(current);
+            int b_factor = avl.balance_factor(current);
             if (b_factor > 1)
             {
-                if (balance_factor(current.left) > 0)
+                if (avl.balance_factor(current.left) > 0)
                 {
-                    current = RotateLL(current);
+                    current = avl.RotateLL(current);
                 }
                 else
                 {
-                    current = RotateLR(current);
+                    current = avl.RotateLR(current);
                 }
             }
             else if (b_factor < -1)
             {
-                if (balance_factor(current.right) > 0)
+                if (avl.balance_factor(current.right) > 0)
                 {
-                    current = RotateRL(current);
+                    current = avl.RotateRL(current);
                 }
                 else
                 {
-                    current = RotateRR(current);
+                    current = avl.RotateRR(current);
                 }
             }
             return current;
-        }
-
-
-
-        public int max(int l, int r)
-        {
-            return l > r ? l : r;
-        }
-        public int getHeight(Node current)
-        {
-            int height = 0;
-            if (current != null)
-            {
-                int l = getHeight(current.left);
-                int r = getHeight(current.right);
-                int m = max(l, r);
-                height = m + 1;
-            }
-            return height;
-        }
-        public int balance_factor(Node current)
-        {
-            int l = getHeight(current.left);
-            int r = getHeight(current.right);
-            int b_factor = l - r;
-            return b_factor;
-        }
-        public Node RotateRR(Node parent)
-        {
-            Node pivot = parent.right;
-            parent.right = pivot.left;
-            pivot.left = parent;
-            return pivot;
-        }
-        public Node RotateLL(Node parent)
-        {
-            Node pivot = parent.left;
-            parent.left = pivot.right;
-            pivot.right = parent;
-            return pivot;
-        }
-        public Node RotateLR(Node parent)
-        {
-            Node pivot = parent.left;
-            parent.left = RotateRR(pivot);
-            return RotateLL(parent);
-        }
-        public Node RotateRL(Node parent)
-        {
-            Node pivot = parent.right;
-            parent.right = RotateLL(pivot);
-            return RotateRR(parent);
         }
     }
 }
