@@ -76,21 +76,21 @@ namespace BinarioSearchTree
         }
 
 
-        public void DeleteAVL(int target)
+        public void DeleteAVL(int deletevalue)
         {
-            Del.root = DeleteAVL(Del.root, target);
+            Del.root = DeleteAVL(Del.root, deletevalue);
         }
 
-        private Node DeleteAVL(Node root, int Deletevalues)
+        private Node DeleteAVL(Node root, int deletevalue)
         {
             Node parent;
             if (root == null)
             { return null; }
             else
             {
-                if (Deletevalues < root.value)
+                if (deletevalue < root.value)
                 {
-                    root.left = DeleteAVL(root.left, Deletevalues);
+                    root.left = DeleteAVL(root.left, deletevalue);
                     if (Del.balance_factor(root) == -2)
                     {
                         if (Del.balance_factor(root.right) <= 0)
@@ -103,9 +103,9 @@ namespace BinarioSearchTree
                         }
                     }
                 }
-                else if (Deletevalues > root.value)
+                else if (deletevalue > root.value)
                 {
-                    root.right = DeleteAVL(root.right, Deletevalues);
+                    root.right = DeleteAVL(root.right, deletevalue);
                     if (Del.balance_factor(root) == 2)
                     {
                         if (Del.balance_factor(root.left) >= 0)

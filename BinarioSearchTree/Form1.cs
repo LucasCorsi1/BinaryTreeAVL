@@ -99,8 +99,7 @@ namespace BinarioSearchTree
 
             int a = Convert.ToInt32(NumericInsert.Value);
 
-
-            insert.Add(a);
+            insert.Insert(a);
 
             print(insert.root);
 

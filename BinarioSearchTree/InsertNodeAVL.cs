@@ -9,20 +9,21 @@ namespace BinarioSearchTree
     class InsertNodeAVL
     {
         public Node root;
-        public void Add(int data)
+
+        public void Insert(int value)
         {
-            Node newItem = new Node(data);
+            Node newItem = new Node(value);
             if (root == null)
             {
                 root = newItem;
             }
             else
             {
-                root = RecursiveInsert(root, newItem);
+                root = Insert(root, newItem);
             }
         }
 
-        private Node RecursiveInsert(Node current, Node n)
+        private Node Insert(Node current, Node n)
         {
             if (current == null)
             {
@@ -31,12 +32,12 @@ namespace BinarioSearchTree
             }
             else if (n.value < current.value)
             {
-                current.left = RecursiveInsert(current.left, n);
+                current.left = Insert(current.left, n);
                 current = balance_tree(current);
             }
             else if (n.value > current.value)
             {
-                current.right = RecursiveInsert(current.right, n);
+                current.right = Insert(current.right, n);
                 current = balance_tree(current);
             }
             return current;
