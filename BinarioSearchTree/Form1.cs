@@ -99,9 +99,9 @@ namespace BinarioSearchTree
             richTextBox1.Clear();
         
             int a = Convert.ToInt32(NumericInsert.Value);
-            if (search.SearchinTree(root, a)) { MessageBox.Show("Valor ja exise"); print(root); }
-            else
-            {
+           if (search.SearchinTree(root, a)) { MessageBox.Show("Valor ja exise"); print(root); }
+           else
+           {
                 insert.insert(root, a);
                 print(root);
             }

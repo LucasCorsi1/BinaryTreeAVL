@@ -1,0 +1,5 @@
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\obj\Debug\BinariySearchTreeAVL.csprojAssemblyReference.cache
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\obj\Debug\BinarioSearchTree.Form1.resources
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\obj\Debug\BinarioSearchTree.Properties.Resources.resources
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\obj\Debug\BinariySearchTreeAVL.csproj.GenerateResource.cache
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\obj\Debug\BinariySearchTreeAVL.csproj.CoreCompileInputs.cache

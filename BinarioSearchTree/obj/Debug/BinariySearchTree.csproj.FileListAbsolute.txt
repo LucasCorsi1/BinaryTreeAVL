@@ -1,0 +1,40 @@
+C:\Users\a0064597\Downloads\BinarySearchTree-master\BinarioSearchTree\bin\Debug\BinarioSearchTree.exe.config
+C:\Users\a0064597\Downloads\BinarySearchTree-master\BinarioSearchTree\bin\Debug\BinarioSearchTree.exe
+C:\Users\a0064597\Downloads\BinarySearchTree-master\BinarioSearchTree\bin\Debug\BinarioSearchTree.pdb
+C:\Users\a0064597\Downloads\BinarySearchTree-master\BinarioSearchTree\obj\Debug\BinariySearchTree.csprojAssemblyReference.cache
+C:\Users\a0064597\Downloads\BinarySearchTree-master\BinarioSearchTree\obj\Debug\BinarioSearchTree.Form1.resources
+C:\Users\a0064597\Downloads\BinarySearchTree-master\BinarioSearchTree\obj\Debug\BinarioSearchTree.Properties.Resources.resources
+C:\Users\a0064597\Downloads\BinarySearchTree-master\BinarioSearchTree\obj\Debug\BinariySearchTree.csproj.GenerateResource.cache
+C:\Users\a0064597\Downloads\BinarySearchTree-master\BinarioSearchTree\obj\Debug\BinariySearchTree.csproj.CoreCompileInputs.cache
+C:\Users\a0064597\Downloads\BinarySearchTree-master\BinarioSearchTree\obj\Debug\BinarioSearchTree.exe
+C:\Users\a0064597\Downloads\BinarySearchTree-master\BinarioSearchTree\obj\Debug\BinarioSearchTree.pdb
+C:\Users\a0064597\Downloads\BinarySearchTree\BinarioSearchTree\bin\Debug\BinarioSearchTree.exe.config
+C:\Users\a0064597\Downloads\BinarySearchTree\BinarioSearchTree\bin\Debug\BinarioSearchTree.exe
+C:\Users\a0064597\Downloads\BinarySearchTree\BinarioSearchTree\bin\Debug\BinarioSearchTree.pdb
+C:\Users\a0064597\Downloads\BinarySearchTree\BinarioSearchTree\obj\Debug\BinariySearchTree.csprojAssemblyReference.cache
+C:\Users\a0064597\Downloads\BinarySearchTree\BinarioSearchTree\obj\Debug\BinarioSearchTree.Form1.resources
+C:\Users\a0064597\Downloads\BinarySearchTree\BinarioSearchTree\obj\Debug\BinarioSearchTree.Properties.Resources.resources
+C:\Users\a0064597\Downloads\BinarySearchTree\BinarioSearchTree\obj\Debug\BinariySearchTree.csproj.GenerateResource.cache
+C:\Users\a0064597\Downloads\BinarySearchTree\BinarioSearchTree\obj\Debug\BinariySearchTree.csproj.CoreCompileInputs.cache
+C:\Users\a0064597\Downloads\BinarySearchTree\BinarioSearchTree\obj\Debug\BinarioSearchTree.exe
+C:\Users\a0064597\Downloads\BinarySearchTree\BinarioSearchTree\obj\Debug\BinarioSearchTree.pdb
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTree\BinarioSearchTree\bin\Debug\BinarioSearchTree.exe.config
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTree\BinarioSearchTree\bin\Debug\BinarioSearchTree.exe
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTree\BinarioSearchTree\bin\Debug\BinarioSearchTree.pdb
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTree\BinarioSearchTree\obj\Debug\BinarioSearchTree.Form1.resources
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTree\BinarioSearchTree\obj\Debug\BinarioSearchTree.Properties.Resources.resources
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTree\BinarioSearchTree\obj\Debug\BinariySearchTree.csproj.GenerateResource.cache
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTree\BinarioSearchTree\obj\Debug\BinariySearchTree.csproj.CoreCompileInputs.cache
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTree\BinarioSearchTree\obj\Debug\BinarioSearchTree.exe
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTree\BinarioSearchTree\obj\Debug\BinarioSearchTree.pdb
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTree\BinarioSearchTree\obj\Debug\BinariySearchTree.csprojAssemblyReference.cache
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\4SIAN\ESTRUTURA DE DADOS II\BinarySearchTree\BinarioSearchTree\bin\Debug\BinarioSearchTree.exe.config
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\4SIAN\ESTRUTURA DE DADOS II\BinarySearchTree\BinarioSearchTree\bin\Debug\BinarioSearchTree.exe
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\4SIAN\ESTRUTURA DE DADOS II\BinarySearchTree\BinarioSearchTree\bin\Debug\BinarioSearchTree.pdb
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\4SIAN\ESTRUTURA DE DADOS II\BinarySearchTree\BinarioSearchTree\obj\Debug\BinariySearchTree.csprojAssemblyReference.cache
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\4SIAN\ESTRUTURA DE DADOS II\BinarySearchTree\BinarioSearchTree\obj\Debug\BinarioSearchTree.Form1.resources
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\4SIAN\ESTRUTURA DE DADOS II\BinarySearchTree\BinarioSearchTree\obj\Debug\BinarioSearchTree.Properties.Resources.resources
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\4SIAN\ESTRUTURA DE DADOS II\BinarySearchTree\BinarioSearchTree\obj\Debug\BinariySearchTree.csproj.GenerateResource.cache
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\4SIAN\ESTRUTURA DE DADOS II\BinarySearchTree\BinarioSearchTree\obj\Debug\BinariySearchTree.csproj.CoreCompileInputs.cache
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\4SIAN\ESTRUTURA DE DADOS II\BinarySearchTree\BinarioSearchTree\obj\Debug\BinarioSearchTree.exe
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\4SIAN\ESTRUTURA DE DADOS II\BinarySearchTree\BinarioSearchTree\obj\Debug\BinarioSearchTree.pdb
