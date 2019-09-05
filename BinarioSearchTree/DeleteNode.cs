@@ -81,70 +81,70 @@ namespace BinarioSearchTree
             Del.root = DeleteAVL(Del.root, target);
         }
 
-        private Node DeleteAVL(Node current, int target)
+        private Node DeleteAVL(Node root, int Deletevalues)
         {
             Node parent;
-            if (current == null)
+            if (root == null)
             { return null; }
             else
             {
-                if (target < current.value)
+                if (Deletevalues < root.value)
                 {
-                    current.left = DeleteAVL(current.left, target);
-                    if (Del.balance_factor(current) == -2)
+                    root.left = DeleteAVL(root.left, Deletevalues);
+                    if (Del.balance_factor(root) == -2)
                     {
-                        if (Del.balance_factor(current.right) <= 0)
+                        if (Del.balance_factor(root.right) <= 0)
                         {
-                            current = Del.RotateRR(current);
+                            root = Del.RotateRR(root);
                         }
                         else
                         {
-                            current = Del.RotateRL(current);
+                            root = Del.RotateRL(root);
                         }
                     }
                 }
-                else if (target > current.value)
+                else if (Deletevalues > root.value)
                 {
-                    current.right = DeleteAVL(current.right, target);
-                    if (Del.balance_factor(current) == 2)
+                    root.right = DeleteAVL(root.right, Deletevalues);
+                    if (Del.balance_factor(root) == 2)
                     {
-                        if (Del.balance_factor(current.left) >= 0)
+                        if (Del.balance_factor(root.left) >= 0)
                         {
-                            current = Del.RotateLL(current);
+                            root = Del.RotateLL(root);
                         }
                         else
                         {
-                            current = Del.RotateLR(current);
+                            root = Del.RotateLR(root);
                         }
                     }
                 }
                 else
                 {
-                    if (current.right != null)
+                    if (root.right != null)
                     {
-                        parent = current.right;
+                        parent = root.right;
                         while (parent.left != null)
                         {
                             parent = parent.left;
                         }
-                        current.value = parent.value;
-                        current.right = DeleteAVL(current.right, parent.value);
-                        if (Del.balance_factor(current) == 2)
+                        root.value = parent.value;
+                        root.right = DeleteAVL(root.right, parent.value);
+                        if (Del.balance_factor(root) == 2)
                         {
-                            if (Del.balance_factor(current.left) >= 0)
+                            if (Del.balance_factor(root.left) >= 0)
                             {
-                                current = Del.RotateLL(current);
+                                root = Del.RotateLL(root);
                             }
-                            else { current = Del.RotateLR(current); }
+                            else { root = Del.RotateLR(root); }
                         }
                     }
                     else
                     {
-                        return current.left;
+                        return root.left;
                     }
                 }
             }
-            return current;
+            return root;
         }
 
 
