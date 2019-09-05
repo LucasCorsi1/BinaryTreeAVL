@@ -9,6 +9,7 @@ namespace BinarioSearchTree
     class InsertNodeAVL
     {
         public Node root;
+
         AVL avl = new AVL();
        
         public void Insert(int value)

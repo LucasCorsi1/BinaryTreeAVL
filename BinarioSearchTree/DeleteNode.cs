@@ -25,17 +25,19 @@ namespace BinarioSearchTree
         }
 
 
-        public void DeleteAVL(int deletevalue)
+      /*  public void DeleteAVL(int deletevalue)
         {
             Root.root = DeleteAVL(Root.root, deletevalue);
-        }
+        }*/
 
-        private Node DeleteAVL(Node root, int deletevalue)
+        public Node DeleteAVL(Node root, int deletevalue)
         {
             Node parent;
 
             if (root == null)
-            { return null; }
+            {
+                return null;
+            }
             else
             {
                 if (deletevalue < root.value)

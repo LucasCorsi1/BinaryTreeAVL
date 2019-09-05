@@ -110,8 +110,7 @@ namespace BinarioSearchTree
             richTextBox1.Clear();
             int a = Convert.ToInt32(NumericDelete.Value);
 
-           //  delete.deleteNode(insert.root, a);
-            delete.DeleteAVL(a);
+            delete.DeleteAVL(insert.root, a);
             print(insert.root);
 
         }
