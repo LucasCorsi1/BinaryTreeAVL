@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BinarioSearchTree
+﻿namespace BinarioSearchTree
 {
-    class InsertNodeAVL
+    internal class InsertNodeAVL
     {
         public Node root;
+        private AVL avl = new AVL();
 
-        AVL avl = new AVL();
-       
         public void Insert(int value)
         {
             Node Item = new Node(value);

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace BinarioSearchTree
@@ -17,27 +10,32 @@ namespace BinarioSearchTree
             InitializeComponent();
         }
 
-        InsertNodeAVL Root = new InsertNodeAVL();
-        DeleteNode delete = new DeleteNode();
-        Bfs search = new Bfs();
+        private InsertNodeAVL Root = new InsertNodeAVL();
+        private DeleteNode delete = new DeleteNode();
+        private Bfs search = new Bfs();
 
 
         private void printRecursive(Node root, int space)
         {
-            int COUNT = 10;
+            int count = 10;
 
             if (root == null)
+            {
                 return;
+            }
 
-            space += COUNT;
+            space += count;
 
             printRecursive(root.right, space);
 
 
             richTextBox1.AppendText(Environment.NewLine);
 
-            for (int i = COUNT; i < space; i++)
+            for (int i = count; i < space; i++)
+            {
                 richTextBox1.AppendText(" ");
+            }
+
             richTextBox1.AppendText(root.value + Environment.NewLine);
 
             printRecursive(root.left, space);
@@ -123,7 +121,10 @@ namespace BinarioSearchTree
             {
                 MessageBox.Show("Valor encontrado");
             }
-            else MessageBox.Show("Valor não encontrado");
+            else
+            {
+                MessageBox.Show("Valor não encontrado");
+            }
         }
 
         private void buttonInorder_Click(object sender, EventArgs e)

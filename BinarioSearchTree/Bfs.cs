@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace BinarioSearchTree
 {
 
     public class Bfs
     {
-        InsertNodeAVL search = new InsertNodeAVL();
+        private readonly InsertNodeAVL search = new InsertNodeAVL();
 
         public bool SearchinTree(Node root, int value)
         {

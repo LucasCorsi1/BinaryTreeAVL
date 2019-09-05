@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BinarioSearchTree
+﻿namespace BinarioSearchTree
 {
-    class DeleteNode
+    internal class DeleteNode
     {
-        InsertNodeAVL Root = new InsertNodeAVL();
-        AVL Del = new AVL();
+        private InsertNodeAVL Root = new InsertNodeAVL();
+        private AVL Del = new AVL();
 
         public Node deleteBinaryTree(Node root)
         {

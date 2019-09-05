@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BinarioSearchTree
+﻿namespace BinarioSearchTree
 {
-    class AVL
+    internal class AVL
     {
         public int GetMax(int large, int right)
         {
