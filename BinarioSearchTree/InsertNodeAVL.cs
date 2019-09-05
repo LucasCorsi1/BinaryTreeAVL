@@ -14,62 +14,62 @@ namespace BinarioSearchTree
        
         public void Insert(int value)
         {
-            Node newItem = new Node(value);
+            Node Item = new Node(value);
             if (root == null)
             {
-                root = newItem;
+                root = Item;
             }
             else
             {
-                root = Insert(root, newItem);
+                root = Insert(root, Item);
             }
         }
 
-        private Node Insert(Node current, Node n)
+        private Node Insert(Node Now, Node Root)
         {
-            if (current == null)
+            if (Now == null)
             {
-                current = n;
-                return current;
+                Now = Root;
+                return Now;
             }
-            else if (n.value < current.value)
+            else if (Root.value < Now.value)
             {
-                current.left = Insert(current.left, n);
-                current = balance_tree(current);
+                Now.left = Insert(Now.left, Root);
+                Now = PerfectBalanceThanos(Now);
             }
-            else if (n.value > current.value)
+            else if (Root.value > Now.value)
             {
-                current.right = Insert(current.right, n);
-                current = balance_tree(current);
+                Now.right = Insert(Now.right, Root);
+                Now = PerfectBalanceThanos(Now);
             }
-            return current;
+            return Now;
         }
-        public Node balance_tree(Node current)
+        public Node PerfectBalanceThanos(Node Now)
         {
-            int b_factor = avl.balance_factor(current);
+            int b_factor = avl.BalanceUiniverse(Now);
             if (b_factor > 1)
             {
-                if (avl.balance_factor(current.left) > 0)
+                if (avl.BalanceUiniverse(Now.left) > 0)
                 {
-                    current = avl.RotateLL(current);
+                    Now = avl.RotationLL(Now);
                 }
                 else
                 {
-                    current = avl.RotateLR(current);
+                    Now = avl.RotationLR(Now);
                 }
             }
             else if (b_factor < -1)
             {
-                if (avl.balance_factor(current.right) > 0)
+                if (avl.BalanceUiniverse(Now.right) > 0)
                 {
-                    current = avl.RotateRL(current);
+                    Now = avl.RotationRL(Now);
                 }
                 else
                 {
-                    current = avl.RotateRR(current);
+                    Now = avl.RotationRR(Now);
                 }
             }
-            return current;
+            return Now;
         }
     }
 }

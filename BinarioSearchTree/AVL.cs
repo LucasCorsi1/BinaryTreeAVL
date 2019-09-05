@@ -8,60 +8,60 @@ namespace BinarioSearchTree
 {
     class AVL
     {
-        public int max(int l, int r)
+        public int GetMax(int large, int right)
         {
-            return l > r ? l : r;
+            return large > right ? large : right;
         }
 
-        public int getHeight(Node current)
+        public int GetSize(Node child)
         {
-            int height = 0;
-            if (current != null)
+            int Size = 0;
+            if (child != null)
             {
-                int l = getHeight(current.left);
-                int r = getHeight(current.right);
-                int m = max(l, r);
-                height = m + 1;
+                int l = GetSize(child.left);
+                int r = GetSize(child.right);
+                int m = GetMax(l, r);
+                Size = m + 1;
             }
-            return height;
+            return Size;
         }
 
-        public int balance_factor(Node current)
+        public int BalanceUiniverse(Node child)
         {
-            int l = getHeight(current.left);
-            int r = getHeight(current.right);
-            int b_factor = l - r;
-            return b_factor;
+            int l = GetSize(child.left);
+            int r = GetSize(child.right);
+            int balance = l - r;
+            return balance;
         }
 
-        public Node RotateRR(Node parent)
+        public Node RotationRR(Node child)
         {
-            Node pivot = parent.right;
-            parent.right = pivot.left;
-            pivot.left = parent;
-            return pivot;
+            Node index = child.right;
+            child.right = index.left;
+            index.left = child;
+            return index;
         }
 
-        public Node RotateLL(Node parent)
+        public Node RotationLL(Node child)
         {
-            Node pivot = parent.left;
-            parent.left = pivot.right;
-            pivot.right = parent;
-            return pivot;
+            Node index = child.left;
+            child.left = index.right;
+            index.right = child;
+            return index;
         }
 
-        public Node RotateLR(Node parent)
+        public Node RotationLR(Node child)
         {
-            Node pivot = parent.left;
-            parent.left = RotateRR(pivot);
-            return RotateLL(parent);
+            Node index = child.left;
+            child.left = RotationRR(index);
+            return RotationLL(child);
         }
 
-        public Node RotateRL(Node parent)
+        public Node RotationRL(Node child)
         {
-            Node pivot = parent.right;
-            parent.right = RotateLL(pivot);
-            return RotateRR(parent);
+            Node index = child.right;
+            child.right = RotationLL(index);
+            return RotationRR(child);
         }
     }
 }

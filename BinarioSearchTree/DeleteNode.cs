@@ -11,92 +11,90 @@ namespace BinarioSearchTree
         InsertNodeAVL Root = new InsertNodeAVL();
         AVL Del = new AVL();
 
-        public void deleteBinaryTree(Node root)
+        public Node deleteBinaryTree(Node root)
         {
             if (root == null)
             {
-                return;
+                return null;
             }
             deleteBinaryTree(root.left);
             root.left = null;
             deleteBinaryTree(root.right);
             root.right = null;
+            Root.root = null;
             root.value = 0;
+
+            return root = null;
         }
 
 
-      /*  public void DeleteAVL(int deletevalue)
+        public Node DeleteAVL(Node DeleteRoot, int deletevalue)
         {
-            Root.root = DeleteAVL(Root.root, deletevalue);
-        }*/
+            Node Child;
 
-        public Node DeleteAVL(Node root, int deletevalue)
-        {
-            Node parent;
-
-            if (root == null)
+            if (DeleteRoot == null)
             {
                 return null;
             }
             else
             {
-                if (deletevalue < root.value)
+                if (deletevalue < DeleteRoot.value)
                 {
-                    root.left = DeleteAVL(root.left, deletevalue);
-                    if (Del.balance_factor(root) == -2)
+                    DeleteRoot.left = DeleteAVL(DeleteRoot.left, deletevalue);
+                    if (Del.BalanceUiniverse(DeleteRoot) == -2)
                     {
-                        if (Del.balance_factor(root.right) <= 0)
+                        if (Del.BalanceUiniverse(DeleteRoot.right) <= 0)
                         {
-                            root = Del.RotateRR(root);
+                            DeleteRoot = Del.RotationRR(DeleteRoot);
                         }
                         else
                         {
-                            root = Del.RotateRL(root);
+                            DeleteRoot = Del.RotationRL(DeleteRoot);
                         }
                     }
                 }
-                else if (deletevalue > root.value)
+                else if (deletevalue > DeleteRoot.value)
                 {
-                    root.right = DeleteAVL(root.right, deletevalue);
-                    if (Del.balance_factor(root) == 2)
+                    DeleteRoot.right = DeleteAVL(DeleteRoot.right, deletevalue);
+                    if (Del.BalanceUiniverse(DeleteRoot) == 2)
                     {
-                        if (Del.balance_factor(root.left) >= 0)
+                        if (Del.BalanceUiniverse(DeleteRoot.left) >= 0)
                         {
-                            root = Del.RotateLL(root);
+                            DeleteRoot = Del.RotationLL(DeleteRoot);
                         }
                         else
                         {
-                            root = Del.RotateLR(root);
+                            DeleteRoot = Del.RotationLR(DeleteRoot);
                         }
                     }
                 }
                 else
                 {
-                    if (root.right != null)
+                    if (DeleteRoot.right != null)
                     {
-                        parent = root.right;
-                        while (parent.left != null)
+                        Child = DeleteRoot.right;
+                        while (Child.left != null)
                         {
-                            parent = parent.left;
+                            Child = Child.left;
                         }
-                        root.value = parent.value;
-                        root.right = DeleteAVL(root.right, parent.value);
-                        if (Del.balance_factor(root) == 2)
+                        DeleteRoot.value = Child.value;
+                        DeleteRoot.right = DeleteAVL(DeleteRoot.right, Child.value);
+                        if (Del.BalanceUiniverse(DeleteRoot) == 2)
                         {
-                            if (Del.balance_factor(root.left) >= 0)
+                            if (Del.BalanceUiniverse(DeleteRoot.left) >= 0)
                             {
-                                root = Del.RotateLL(root);
+                                DeleteRoot = Del.RotationLL(DeleteRoot);
                             }
-                            else { root = Del.RotateLR(root); }
+                            else { DeleteRoot = Del.RotationLR(DeleteRoot); }
                         }
                     }
                     else
                     {
-                        return root.left;
+                        return DeleteRoot.left;
                     }
                 }
             }
-            return root;
+            return DeleteRoot;
         }
 
 

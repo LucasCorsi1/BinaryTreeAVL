@@ -17,7 +17,7 @@ namespace BinarioSearchTree
             InitializeComponent();
         }
 
-        InsertNodeAVL insert = new InsertNodeAVL();
+        InsertNodeAVL Root = new InsertNodeAVL();
         DeleteNode delete = new DeleteNode();
         Bfs search = new Bfs();
 
@@ -88,7 +88,7 @@ namespace BinarioSearchTree
         private void btnshow_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
-            print(insert.root);
+            print(Root.root);
 
         }
 
@@ -98,9 +98,9 @@ namespace BinarioSearchTree
 
             int a = Convert.ToInt32(NumericInsert.Value);
 
-            insert.Insert(a);
+            Root.Insert(a);
 
-            print(insert.root);
+            print(Root.root);
 
         }
 
@@ -110,8 +110,8 @@ namespace BinarioSearchTree
             richTextBox1.Clear();
             int a = Convert.ToInt32(NumericDelete.Value);
 
-            delete.DeleteAVL(insert.root, a);
-            print(insert.root);
+            delete.DeleteAVL(Root.root, a);
+            print(Root.root);
 
         }
 
@@ -119,7 +119,7 @@ namespace BinarioSearchTree
         {
             int a = Convert.ToInt32(NumericSearch.Value);
 
-            if (search.SearchinTree(insert.root, a))
+            if (search.SearchinTree(Root.root, a))
             {
                 MessageBox.Show("Valor encontrado");
             }
@@ -129,27 +129,27 @@ namespace BinarioSearchTree
         private void buttonInorder_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
-            inorder(insert.root);
+            inorder(Root.root);
         }
 
         private void buttonPostorder_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
-            postorder(insert.root);
+            postorder(Root.root);
         }
 
         private void buttonPreorder_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
-            preorder(insert.root);
+            preorder(Root.root);
         }
 
 
         private void btndeleteall_Click(object sender, EventArgs e)
         {
 
-            delete.deleteBinaryTree(insert.root);
-            print(insert.root);
+            delete.deleteBinaryTree(Root.root);
+            print(Root.root);
         }
     }
 }
