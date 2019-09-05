@@ -12,6 +12,7 @@ namespace BinarioSearchTree
         {
             return l > r ? l : r;
         }
+
         public int getHeight(Node current)
         {
             int height = 0;
@@ -24,6 +25,7 @@ namespace BinarioSearchTree
             }
             return height;
         }
+
         public int balance_factor(Node current)
         {
             int l = getHeight(current.left);
@@ -31,6 +33,7 @@ namespace BinarioSearchTree
             int b_factor = l - r;
             return b_factor;
         }
+
         public Node RotateRR(Node parent)
         {
             Node pivot = parent.right;
@@ -38,6 +41,7 @@ namespace BinarioSearchTree
             pivot.left = parent;
             return pivot;
         }
+
         public Node RotateLL(Node parent)
         {
             Node pivot = parent.left;
@@ -45,12 +49,14 @@ namespace BinarioSearchTree
             pivot.right = parent;
             return pivot;
         }
+
         public Node RotateLR(Node parent)
         {
             Node pivot = parent.left;
             parent.left = RotateRR(pivot);
             return RotateLL(parent);
         }
+
         public Node RotateRL(Node parent)
         {
             Node pivot = parent.right;
