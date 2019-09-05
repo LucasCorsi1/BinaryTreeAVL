@@ -37,7 +37,7 @@ namespace BinarioSearchTree
 
         public bool Find(int v)
         {
-            if (Find(v,search.root ).value == v)
+            if (Find(v, search.root).value == v)
             {
                 return true;
             }
