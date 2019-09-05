@@ -34,42 +34,5 @@ namespace BinarioSearchTree
             return false;
 
         }
-
-        public bool Find(int v)
-        {
-            if (Find(v, search.root).value == v)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        private Node Find(int target, Node current)
-        {
-
-            if (target < current.value)
-            {
-                if (target == current.value)
-                {
-                    return current;
-                }
-                else
-                    return Find(target, current.left);
-            }
-            else
-            {
-                if (target == current.value)
-                {
-                    return current;
-                }
-                else
-                    return Find(target, current.right);
-            }
-
-        }
-
     }
 }

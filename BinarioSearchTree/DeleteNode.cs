@@ -72,6 +72,7 @@ namespace BinarioSearchTree
             root.left = null;
             deleteBinaryTree(root.right);
             root.right = null;
+            root.value = 0;
         }
 
 
