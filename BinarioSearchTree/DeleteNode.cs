@@ -8,6 +8,7 @@ namespace BinarioSearchTree
 {
     class DeleteNode
     {
+        InsertNodeAVL Del = new InsertNodeAVL();
         public Node deleteNode(Node root, int DeleteValues) // delete
         {
             if (root == null)
@@ -72,6 +73,79 @@ namespace BinarioSearchTree
             deleteBinaryTree(root.right);
             root.right = null;
         }
+
+
+        public void DeleteAVL(int target)
+        {
+            Del.root = DeleteAVL(Del.root, target);
+        }
+
+        private Node DeleteAVL(Node current, int target)
+        {
+            Node parent;
+            if (current == null)
+            { return null; }
+            else
+            {
+                if (target < current.value)
+                {
+                    current.left = DeleteAVL(current.left, target);
+                    if (Del.balance_factor(current) == -2)
+                    {
+                        if (Del.balance_factor(current.right) <= 0)
+                        {
+                            current = Del.RotateRR(current);
+                        }
+                        else
+                        {
+                            current = Del.RotateRL(current);
+                        }
+                    }
+                }
+                else if (target > current.value)
+                {
+                    current.right = DeleteAVL(current.right, target);
+                    if (Del.balance_factor(current) == 2)
+                    {
+                        if (Del.balance_factor(current.left) >= 0)
+                        {
+                            current = Del.RotateLL(current);
+                        }
+                        else
+                        {
+                            current = Del.RotateLR(current);
+                        }
+                    }
+                }
+                else
+                {
+                    if (current.right != null)
+                    {
+                        parent = current.right;
+                        while (parent.left != null)
+                        {
+                            parent = parent.left;
+                        }
+                        current.value = parent.value;
+                        current.right = DeleteAVL(current.right, parent.value);
+                        if (Del.balance_factor(current) == 2)
+                        {
+                            if (Del.balance_factor(current.left) >= 0)
+                            {
+                                current = Del.RotateLL(current);
+                            }
+                            else { current = Del.RotateLR(current); }
+                        }
+                    }
+                    else
+                    {
+                        return current.left;
+                    }
+                }
+            }
+            return current;
+        }
+
 
     }
 

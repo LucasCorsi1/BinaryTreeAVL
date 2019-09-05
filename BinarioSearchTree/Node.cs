@@ -9,6 +9,10 @@ namespace BinarioSearchTree
         public Node right;
         public int height;
 
+        public Node(int value)
+        {
+            this.value = value;
+        }
     }
 }
 

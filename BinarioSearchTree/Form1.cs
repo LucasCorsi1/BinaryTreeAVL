@@ -17,8 +17,7 @@ namespace BinarioSearchTree
             InitializeComponent();
         }
 
-        Node root = new Node();
-        InsertNode insert = new InsertNode();
+        InsertNodeAVL insert = new InsertNodeAVL();
         DeleteNode delete = new DeleteNode();
         Bfs search = new Bfs();
 
@@ -90,7 +89,7 @@ namespace BinarioSearchTree
         private void btnshow_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
-            print(root);
+            print(insert.root);
 
         }
 
@@ -99,11 +98,12 @@ namespace BinarioSearchTree
             richTextBox1.Clear();
         
             int a = Convert.ToInt32(NumericInsert.Value);
-           if (search.SearchinTree(root, a)) { MessageBox.Show("Valor ja exise"); print(root); }
-           else
-           {
-                insert.insert(root, a);
-                print(root);
+           if (search.SearchinTree(insert.root, a)) { MessageBox.Show("Valor ja exise"); print(insert.root); }
+          else
+          {
+                insert.Add(a);
+ 
+                print(insert.root);
             }
         }
 
@@ -112,8 +112,9 @@ namespace BinarioSearchTree
             richTextBox1.Clear();
             int a = Convert.ToInt32(NumericDelete.Value);
 
-            delete.deleteNode(root, a);
-            print(root);
+            // delete.deleteNode(root2, a);
+            delete.DeleteAVL(a);
+            print(insert.root);
 
         }
 
@@ -121,7 +122,7 @@ namespace BinarioSearchTree
         {
             int a = Convert.ToInt32(NumericSearch.Value);
 
-            if (search.SearchinTree(root, a))
+            if (search.SearchinTree(insert.root, a))
             {
                 MessageBox.Show("Valor encontrado");
             }
@@ -131,27 +132,27 @@ namespace BinarioSearchTree
         private void buttonInorder_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
-            inorder(root);
+            inorder(insert.root);
         }
 
         private void buttonPostorder_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
-            postorder(root);
+            postorder(insert.root);
         }
 
         private void buttonPreorder_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
-            preorder(root);
+            preorder(insert.root);
         }
 
 
         private void btndeleteall_Click(object sender, EventArgs e)
         {
             
-            delete.deleteBinaryTree(root);
-            print(root);
+            delete.deleteBinaryTree(insert.root);
+            print(insert.root);
         }
     }
 }
