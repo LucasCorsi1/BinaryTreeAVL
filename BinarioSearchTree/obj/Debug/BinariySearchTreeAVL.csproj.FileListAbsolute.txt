@@ -3,3 +3,8 @@ C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearc
 C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\obj\Debug\BinarioSearchTree.Properties.Resources.resources
 C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\obj\Debug\BinariySearchTreeAVL.csproj.GenerateResource.cache
 C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\obj\Debug\BinariySearchTreeAVL.csproj.CoreCompileInputs.cache
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\bin\Debug\BinarioSearchTree.exe.config
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\bin\Debug\BinarioSearchTree.exe
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\bin\Debug\BinarioSearchTree.pdb
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\obj\Debug\BinarioSearchTree.exe
+C:\Users\lucas\OneDrive - Complexo de Ensino Superior do Brasil LTDA\BinarySearchTreeAVL\BinarioSearchTree\obj\Debug\BinarioSearchTree.pdb
