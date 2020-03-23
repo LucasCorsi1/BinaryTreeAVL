@@ -3,3 +3,10 @@ AVL Tree  para fins de Estudo , Estrutura de Dados II desenvolvido em windows fo
 
 
 
+
+
+
+![image](https://user-images.githubusercontent.com/48248470/77318034-1265d780-6ceb-11ea-9115-a2cc900e537b.png)
+
+
+
